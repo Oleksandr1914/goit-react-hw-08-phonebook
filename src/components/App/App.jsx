@@ -15,8 +15,8 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Navigation />}>
           <Route path="/" element={<PublicRoute />}>
-            <Route path="/register" element={<SingUp />} />
             <Route path="/login" element={<LogIn />} />
+            <Route path="/register" element={<SingUp />} />
           </Route>
           <Route path="/" element={<PrivateRoute />}>
             <Route path="/contacts" element={<Contacts />} />

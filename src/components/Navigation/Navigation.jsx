@@ -58,6 +58,7 @@ const Navigation = () => {
           style={{
             display: 'flex',
             alignItems: 'center',
+            gap: '5px',
           }}
         >
           <FiUser />
@@ -73,11 +74,9 @@ const Navigation = () => {
         {user ? (
           <Tabs>
             <TabList>
-              <CustomTab>
-                <NavLink to="/contacts" style={{ marginLeft: '5px' }}>
-                  Contacts
-                </NavLink>
-              </CustomTab>
+              <NavLink to="/contacts">
+                <CustomTab>Contacts</CustomTab>
+              </NavLink>
               <Box
                 display="flex"
                 alignItems="center"
@@ -99,16 +98,12 @@ const Navigation = () => {
         ) : (
           <Tabs>
             <TabList>
-              <CustomTab2>
-                <NavLink to="/login" style={{ marginLeft: '5px' }}>
-                  Log in
-                </NavLink>
-              </CustomTab2>
-              <CustomTab2>
-                <NavLink to="/register" style={{ marginLeft: '5px' }}>
-                  Sign up
-                </NavLink>
-              </CustomTab2>
+              <NavLink to="/login">
+                <CustomTab2>Log in</CustomTab2>
+              </NavLink>
+              <NavLink to="/register">
+                <CustomTab2>Sign up</CustomTab2>
+              </NavLink>
             </TabList>
           </Tabs>
         )}
